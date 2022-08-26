@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class TablaUsuariosComponent implements OnInit {
 
   Users:any;
+  Domicilio:any;
 
   constructor(private http: HttpClient) { 
     
@@ -18,8 +19,7 @@ export class TablaUsuariosComponent implements OnInit {
     this.http.get("http://127.0.0.1:8000/index").subscribe(
       resultado =>{
         this.Users = resultado;
-      }
-      
+      },
     )
   }
 }
